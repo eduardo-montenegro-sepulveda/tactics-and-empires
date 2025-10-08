@@ -2,210 +2,204 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class NivelArmaSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      */
     public function run(): void
     {
         /**
-         * Seeder tabla expansiones.
+         * Seeder tabla niveles_armas.
          */
-        $expansiones =
+        $niveles_armas =
         [
+            /**
+             * Mirmidón.
+             */
             array
             (
-                'numero' => 1,
-                'nombre' => 'Expansión Base',
-                'cartas' => 150,
+                'nivel_arma' => 'E',
+                'carta_id' => 1,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+
+            /**
+             * Espadachín.
+             */
+            array
+            (
+                'nivel_arma' => 'E',
+                'carta_id' => 2,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'D',
+                'carta_id' => 2,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'C',
+                'carta_id' => 2,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+
+            /**
+             * Ejecutor.
+             */
+            array
+            (
+                'nivel_arma' => 'E',
+                'carta_id' => 3,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'D',
+                'carta_id' => 3,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'C',
+                'carta_id' => 3,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'B',
+                'carta_id' => 3,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'A',
+                'carta_id' => 3,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+
+            /**
+             * Mercenario.
+             */
+            array
+            (
+                'nivel_arma' => 'E',
+                'carta_id' => 4,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'D',
+                'carta_id' => 4,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'C',
+                'carta_id' => 4,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+
+            /**
+             * Campeón.
+             */
+            array
+            (
+                'nivel_arma' => 'E',
+                'carta_id' => 5,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'D',
+                'carta_id' => 5,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'C',
+                'carta_id' => 5,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'B',
+                'carta_id' => 5,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'A',
+                'carta_id' => 5,
+                'arma_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'E',
+                'carta_id' => 5,
+                'arma_id' => 3,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'D',
+                'carta_id' => 5,
+                'arma_id' => 3,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ),
+            array
+            (
+                'nivel_arma' => 'C',
+                'carta_id' => 5,
+                'arma_id' => 3,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ),
         ];
 
-        DB::table('expansiones')->insert($expansiones);
-
-        /**
-         * Seeder tabla clases.
-         */
-        $clases =
-        [
-            array
-            (
-                'clase' => 'Básica',
-                'etapa' => 1,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'clase' => '1ra Promoción',
-                'etapa' => 2,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'clase' => '2da Promoción',
-                'etapa' => 3,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-        ];
-
-        DB::table('clases')->insert($clases);
-
-        /**
-         * Seeder tabla unidades.
-         */
-        $unidades =
-        [
-            array
-            (
-                'unidad_de' => 'Infantería',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'unidad_de' => 'Caballería',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-        ];
-
-        DB::table('unidades')->insert($unidades);
-
-        /**
-         * Seeder tabla entrenamientos.
-         */
-        $entrenamientos =
-        [
-            array
-            (
-                'entrenado_en' => 'Cuartel',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'entrenado_en' => 'Establo',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'entrenado_en' => 'Galería de Tiro',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-        ];
-
-        DB::table('entrenamientos')->insert($entrenamientos);
-
-        $this->call([HabilidadSeeder::class, CartaSeeder::class]);
-
-        /**
-         * Seeder tabla recursos.
-         */
-        $recursos =
-        [
-            array
-            (
-                'recurso' => 'Riqueza',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'recurso' => 'Alimento',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'recurso' => 'Madera',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-        ];
-
-        DB::table('recursos')->insert($recursos);
-
-        $this->call(CostoJuegoSeeder::class);
-
-        /**
-         * Seeder tabla armas.
-         */
-        $armas =
-        [
-            array
-            (
-                'arma' => 'Espada',
-                'rango' => 1,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'arma' => 'Lanza',
-                'rango' => 1,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'arma' => 'Hacha',
-                'rango' => 1,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'arma' => 'Arco',
-                'rango' => 2,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-        ];
-
-        DB::table('armas')->insert($armas);
-
-        $this->call(NivelArmaSeeder::class);
-
-        /**
-         * Seeder tabla estadisticas.
-         */
-        $estadisticas =
-        [
-            array
-            (
-                'estadistica' => 'Puntos de Vida',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'estadistica' => 'Ataque',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-            array
-            (
-                'estadistica' => 'Defensa',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ),
-        ];
-
-        DB::table('estadisticas')->insert($estadisticas);
-
-        $this->call(PuntoEstadisticaSeeder::class);
+        DB::table('niveles_armas')->insert($niveles_armas);
     }
 }
